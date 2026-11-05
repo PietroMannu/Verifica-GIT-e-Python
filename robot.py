@@ -33,6 +33,39 @@ class Robot:
                 self.componenti.append(componente)
             
         codice_duplicato = self.componente.codice
+        
+    def peso_componenti(self)-> float:
+        pesoTot = sum(self.componenti.peso_kg)
+        return pesoTot
+    
+    def cerca_componente(self, codice: str)-> Componente:
+        codice = input("Inserire codice componente")
+        zero = 0
+        for componente in componenti():
+            if (codice == self.componente.codice):
+                return self.componente
+                zero = 1
+                break
+            else:
+                zero = 0
+        if (zero == 0):
+            print (f"Il codice del componente richiesto non esiste")
+            return None 
+        
+    def rimuovi_componente(self, codice:str)-> Componente:
+        codice = input("Inserire codice componente")
+        zero = 0
+        for componente in componenti():
+            if (codice == self.componente.codice):
+                componenti.del(componente)
+                break
+            else:
+                return None
+            
+    
+            
+        
+            
             
 
         
